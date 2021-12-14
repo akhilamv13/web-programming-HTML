@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <script>
+            function change(){
+                //console.log(Math.random()*10000000);
+                var color='#'+Math.floor(Math.random()*10000000).toString(16);
+                document.body.style.backgroundColor=color;
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="change()" style="width: 5cm;height: 1cm;margin-left: 42%;margin-top: 25%;">Change </button>
+    </body>
+</html>

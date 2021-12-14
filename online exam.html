@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>Online Exam</title>
+        <script>
+            function change(){
+                document.body.style.backgroundColor="red";
+            }
+            function eva(){
+                //document.body.style.backgroundColor="red";
+                var score=0;
+                if(document.getElementById("C++").checked)
+                score=score+1;
+                if(document.getElementById("10").checked)
+                score=score+1;
+                if(document.getElementById("frameset").checked)
+                score=score+1;
+                if(document.getElementById("html").checked)
+                score=score+1;
+                if(document.getElementById("windows").checked)
+                score=score+1;
+                //document.write(score);
+                alert("You scored "+score+" out of 5");
+            }
+        </script>
+        <style>
+            table{
+                margin-left: 25%;
+                background-color: aliceblue;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th colspan="4"><h1><u>Online Quiz</u></h1></th>
+            </tr>
+            <tr><th></th><th></th><th></th></tr>
+            <div>
+            <tr>
+                <td>1:</td>
+                <td colspan="3">Which of the following is a programming language ?</td>
+            </tr>
+            <br>
+            <tr>
+                <td>a)</td>
+                <td><input type="radio" name="Q1">HTML</td>
+                <td>b)</td>
+                <td><input type="radio" name="Q1">CSS</td>
+            </tr>
+            <tr>
+                <td>c)</td>
+                <td><input type="radio" name="Q1" id="C++">C++</td>
+                <td>d)</td>
+                <td><input type="radio" name="Q1">All of the above</td>
+            </tr>
+            <tr>
+                <td>2:</td>
+                <td colspan="2">Which of the following is the binary value of 2 ?</td>
+            </tr>
+            <tr>
+                <td>a)</td>
+                <td><input type="radio" name="Q2">0</td>
+                <td>b)</td>
+                <td><input type="radio" name="Q2">100</td>
+            </tr>
+            <tr>
+                <td>c)</td>
+                <td><input type="radio" name="Q2">1</td>
+                <td>d)</td>
+                <td><input type="radio" name="Q2" id="10">10</td>
+            </tr>
+            <tr>
+                <td>3:</td>
+                <td colspan="2">Which of the following tag is user for dividing navigation frame?</td>
+            </tr>
+            <tr>
+                <td>a)</td>
+                <td><input type="radio" name="Q3" id="frameset">frameset</td>
+                <td>b)</td>
+                <td><input type="radio" name="Q3">frame</td>
+            </tr>
+            <tr>
+                <td>c)</td>
+                <td><input type="radio" name="Q3">iframe</td>
+                <td>d)</td>
+                <td><input type="radio" name="Q3">navframe</td>
+            </tr>
+            <tr>
+                <td>4:</td>
+                <td colspan="2">Which of the following is the full form of HTML ?</td>
+            </tr>
+            <tr>
+                <td>a)</td>
+                <td><input type="radio" name="Q4">Hyper text markup page</td>
+                <td>b)</td>
+                <td><input type="radio" name="Q4"m id="html">Hyper text markup language</td>
+            </tr>
+            <tr>
+                <td>c)</td>
+                <td><input type="radio" name="Q4">Hyper text markup lining</td>
+                <td>d)</td>
+                <td><input type="radio" name="Q4">Hyper text making language</td>
+            </tr>
+            <tr>
+                <td>5:</td>
+                <td colspan="2">Which of the following is a operating system ?</td>
+            </tr>
+            <tr>
+                <td>a)</td>
+                <td><input type="radio" name="Q5">Linked in</td>
+                <td>b)</td>
+                <td><input type="radio" name="Q5"m id="windows">Windows</td>
+            </tr>
+            <tr>
+                <td>c)</td>
+                <td><input type="radio" name="Q5">Central processing unit</td>
+                <td>d)</td>
+                <td><input type="radio" name="Q5">Git</td>
+            </tr>
+            <tr>
+                <th colspan="4"><button onclick="eva()" style="width: 3cm;height: .8cm; background-color:azure;">Submit</button></th>
+            </tr>
+        </div>
+        </table>
+    </body>
+</html>
