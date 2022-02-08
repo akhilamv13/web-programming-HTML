@@ -1,0 +1,351 @@
+<html>
+    <head>
+        <title>String Functions</title>
+        <script>
+            function strings()
+            {
+                var s=document.getElementById('str').value;
+                fst=s.charAt(0);
+                document.getElementById('first').value=fst;
+                lw=s.toLowerCase();
+                document.getElementById('lower').value=lw;
+                up=s.toUpperCase();
+                document.getElementById('upper').value=up;
+                rv=s.split('').reverse().join('');
+                document.getElementById('rev').value=rv;
+            }
+            function cont()
+            {
+                var s=document.getElementById('str').value;
+                var s1=document.getElementById('con').value;
+                cont=s.concat(s1);
+                document.getElementById('conct').value=cont;
+            }
+            function replace()
+            {
+                var s=document.getElementById('conct').value;
+                var s2=document.getElementById('old').value;
+                var s3=document.getElementById('new').value;
+                ns=s.replace(s2,s3);
+                document.getElementById('news').value=ns;
+            }
+            function index()
+            {
+                var s=document.getElementById('news').value;
+                var i=document.getElementById('element').value;
+                ind=s.indexOf(i);
+                document.getElementById('indexx').value=ind;
+            }
+            function slice()
+            {
+                var s=document.getElementById('news').value;
+                var s2=document.getElementById('start').value;
+                var s3=document.getElementById('end').value;
+                sl=s.slice(s2,s3);
+                document.getElementById('sl').value=sl;
+            }
+            function number()
+            {
+                n=document.getElementById('num').value;
+                pw=Math.pow(n,2);
+                document.getElementById('power').value=pw;
+                intg=Math.ceil(n);
+                document.getElementById('int').value=intg;
+                bint=Math.floor(n);
+                document.getElementById('bin').value=bint;
+                rount=Math.round(n);
+                document.getElementById('rnd').value=rount;
+                tr=Math.trunc(n);
+                document.getElementById('trunc').value=tr;
+                si=Math.sign(n);
+                if(si==1)
+                {
+                    document.getElementById('sign').value="Positive";
+                }
+                else if(si==0)
+                {
+                    document.getElementById('sign').value="Zero";
+                }
+                else
+                {
+                    document.getElementById('sign').value="Negative";
+                }
+               ran=Math.random(n);
+               document.getElementById('random').value=ran;
+               ab=Math.abs(pw);
+               document.getElementById('abs').value=ab;
+            }
+            function maxmin()
+            {
+                a=document.getElementById('num1').value;
+                b=document.getElementById('num2').value;
+                c=document.getElementById('num3').value;
+                d=Math.max(a,b,c);
+                e=Math.min(a,b,c);
+                document.getElementById('max').value=d;
+                document.getElementById('min').value=e;
+            }
+        </script>
+    </head>
+    <body style="background-color: wheat;">
+        <center><b><h1>String Operations</h1></b></center>
+        <br>
+        <table style="align-content: center;margin-left: 30%;">
+            <tr>
+                <th>
+                   <label for="" style="font-size: 1em;">Enter a String</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="text" id='str'>
+                </td>
+                <td><button onclick="strings()">ok</button></td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="" style="font-size: 1em;">Element at first position</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="text" id='first'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="" style="font-size: 1em;">To lower case</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="text" id='lower'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="" style="font-size: 1em;">To upper case</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="text" id='upper'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="" style="font-size: 1em;">Reverse</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="text" id='rev'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="" style="font-size: 1em;">Enter String to concat</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="text" id='con'>
+                </td>
+                <td><button onclick="cont()">ok</button></td>
+                <td>
+                    <input type="text" id='conct'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="" style="font-size: 1em;">Enter string to be replaced</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="text" id='old'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="" style="font-size: 1em;">Enter new string</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="text" id='new'>
+                </td>
+                <td><button onclick="replace()">ok</button></td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="" style="font-size: 1em;">New string</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="text" id='news'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="" style="font-size: 1em;">Enter the element to get its index value</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="text" id='element'>
+                </td>
+                <td><button onclick="index()">ok</button></td>
+                <td>
+                    <input type="text" id='indexx'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="" style="font-size: 1em;">Enter starting index to Slice</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="number" id='start'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="" style="font-size: 1em;">Enter ending index to Slice</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="number" id='end'>
+                </td>
+                <td><button onclick="slice()">ok</button></td>
+                <td>
+                    <input type="text" id='sl'>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <center><b><h1>Math Functions</h1></b></center>
+        <br>
+        <table style="align-content: center;margin-left: 30%;">
+            <tr>
+                <th>
+                   <label for="" style="font-size: 1em;">Enter a Number</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="number" id='num'>
+                </td>
+                <td><button onclick="number()">ok</button></td>
+            </tr>
+            <tr>
+                <th>
+                   <label for="" style="font-size: 1em;">Square of the number</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="number" id='power'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   <label for="" style="font-size: 1em;">Next integer</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="number" id='int'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   <label for="" style="font-size: 1em;">Integer just befor the given number</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="number" id='bin'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   <label for="" style="font-size: 1em;">Rounded value</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="number" id='rnd'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   <label for="" style="font-size: 1em;">Integer part of given number</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="number" id='trunc'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   <label for="" style="font-size: 1em;">Sign of given number</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="text" id='sign'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   <label for="" style="font-size: 1em;">Random value</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="number" id='random'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   <label for="" style="font-size: 1em;">Absolute value of square</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="number" id='abs'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   <label for="" style="font-size: 1em;">Enter number1</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="number" id='num1'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   <label for="" style="font-size: 1em;">Enter number2</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="number" id='num2'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   <label for="" style="font-size: 1em;">Enter number3</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="number" id='num3'>
+                </td>
+                <td><button onclick="maxmin()">ok</button></td>
+            </tr>
+            <tr>
+                <th>
+                   <label for="" style="font-size: 1em;">Largest of 3 numbers</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="number" id='max'>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   <label for="" style="font-size: 1em;">Smallest of 3 numbers</label>
+                </th>
+                <th>:</th>
+                <td>
+                    <input type="number" id='min'>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

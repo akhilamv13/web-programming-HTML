@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Mouse Events</title>
+        <script>
+            function change1(){
+                document.getElementById('image').src="cat(5).png";
+                document.getElementById('heading1').style.display="none";
+                document.getElementById('heading2').style.display="block";
+            }
+            function change2(){
+                document.getElementById('image').src="cute(5).png";
+                document.getElementById('heading1').style.display="block";
+                document.getElementById('heading2').style.display="none";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="content" onmouseover="change1(this)" onmouseout="change2(this)">
+            <img src="cute cat(5).png" alt="" id="image">
+            <h1 id="heading1">Hello World....</h1>
+            <h2 id="heading2">Kitty Here....</h2>
+        </div>
+    </body>
+</html>
