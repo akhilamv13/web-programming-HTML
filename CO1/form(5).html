@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <title>Registration form</title>
+        <style>
+            body{
+                background-color:wheat;
+            }
+            h1{
+                color: cadetblue;
+                text-align: center;
+                font-size: 3em;
+            }
+            table{
+                text-align: center;
+                width: 100%;
+                border: 2;
+                border-color: black;
+                margin-left: 30%;
+                margin-right: 30%;
+                background-color: palegoldenrod;
+                width: 20cm;
+            }
+            th{
+                text-align: left;
+                margin-left: 50%;
+            }
+            td{
+                text-align: left;
+            }
+            input[type=text]{
+                width: auto;
+                height: 1cm;
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+            }
+            input[type=number]{
+                
+                width: auto;
+                height: 1cm;
+            }
+            input[type=date]{
+                width: auto;
+                height: 1cm;
+            }
+            input[type=password]{
+                width: auto;
+                height: 1cm;
+            }
+            input[type=email]{
+                width: auto;
+                height: 1cm;
+            }
+            textarea{
+            }
+            select{
+                height: 1cm;
+            }
+            form{
+                text-align: center;
+            }
+            label{
+                font-size: 1.25em;
+            }
+            .s1{
+                font-size: 1.1em;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Registration Form</h1><br><br>
+        <form>
+            <table>
+                <tr>
+                    <th><label>Name</label></th>
+                    <th>:</th>
+                    <td> <input type="text" width="20cm" maxlength="15" autofocus required style="width: 6.3cm;" placeholder="Your name"></td>
+                </tr>
+                <tr>
+                    <th><label>Date of Birth</label></th>
+                    <th>:</th>
+                    <td> <input type="date" width="20cm" maxlength="15" autofocus required style="width: 6.3cm;"></td>
+                </tr>
+                <tr>
+                    <th><label>Address</label></th>
+                    <th>:</th>
+                    <td><textarea name="address" id="" cols="30" rows="6" placeholder="Your Address" required></textarea></td>
+                </tr>
+                <tr>
+                    <th><label>Sex</label></th>
+                    <th>:</th>
+                    <td>
+                        <input type="radio" name="sex" id="f"><label for="html" class="s1">Female</label><br>
+                        <input type="radio" name="sex" id="m"><label for="html" class="s1">Male</label><br>
+                        <input type="radio" name="sex" id="t"><label for="html" class="s1">Transgender</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label>Nationality</label></th>
+                    <th>:</th>
+                    <td>
+                        <select name="country" id="country" required style="width: 6.3cm;">
+                        <option selected="" value="Defualt">(Please select a country)</option>
+                        <option value="ind">India</option>
+                        <option value="aus">Australia</option>
+                        <option value="us">America</option>
+                        <option value="uk">London</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label>Languages Known</label></th>
+                    <th>:</th>
+                    <td>
+                        <input type="checkbox"><label for="html" class="s1">C</label><br>
+                        <input type="checkbox"><label for="html" class="s1">C++</label><br>
+                        <input type="checkbox"><label for="html" class="s1">Python</label><br>
+                        <input type="checkbox"><label for="html" class="s1">Java</label><br>
+                        <input type="checkbox"><label for="html" class="s1">Javascript</label><br>
+                        <input type="checkbox"><label for="html" class="s1">PHP</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label>Email</label></th>
+                    <th>:</th>
+                    <td><input type="email" style="width: 6.3cm;" placeholder="Your Email" required=""></td>
+                </tr>
+                <tr>
+                    <th><label>Password</label></th>
+                    <th>:</th>
+                    <td><input type="password" minlength="8" maxlength="15" style="width: 6.3cm;" placeholder="Password" required></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <td><button action="page.html" style="width: 3cm; height: 1cm;">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
